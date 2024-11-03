@@ -1,4 +1,4 @@
-# simple-notes-app
+# Simple_Notes_App
 A simple Notes Web App using Flask and MongoDB
 
 This is a simple Notes App I created, to learn using Flask with MongoDB.
