@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Notes History</title>
+</head>
+<body>
+    <h1>Notes History</h1>
+    <form action="/notes/clear-history">
+        <button type="submit">Clear History</button>
+    </form>
+    <p></p>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Original Note ID</th>
+                <th>Content</th>
+                <th>Action</th>
+                <th>Time</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for history_item in history %}
+            <tr>
+                <td>{{ history_item['orig_id'] }}</td>
+                <td>{{ history_item['content'] }}</td>
+                <td>{{ history_item['action'] }}</td>
+                <td>{{ history_item['time'] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <p></p>
+    <a href="{{ url_for('index') }}">Back to Notes</a>
+</body>
+</html>

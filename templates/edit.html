@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Note</title>
+</head>
+<body>
+    <h1>Edit Note</h1>
+    <form action="" method="post">
+        <input type="text" name="content" value="{{ note.content }}" required>&nbsp;&nbsp;
+        <button type="submit">Update Note</button>
+    </form>
+    <p></p>
+    <a href="{{ url_for('index') }}">Back to Notes</a>
+</body>
+</html>
